@@ -1,1 +1,11 @@
-This is a sample README file.
+COURSERA (STANFORD) STARTUP ENGINEERING
+
+This is a repository containing files used in the Coursera Startup Engineering course.  All changes that are to be executed should be pushed to 
+
+git@heroku.com:warm-scrubland-4839.git
+
+or "heroku" as the remote is configured.  All changes should be pushed to 
+
+git@rspencer01:stanfordStartupEngineering.git
+
+or "github: as the remote is configured.
