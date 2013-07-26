@@ -8,12 +8,12 @@ var fs = require('fs');
 http.createServer(function(request,response)
 {
   var pth = url.parse(request.url).pathname + '.html';
+  var full_path = pth;//path.join(process.cwd(),pth);
   sys.puts(pth);
-  var full_path = path.join(process.cwd(),pth);
   fs.exists(full_path,function(exists)
   {
     if (!exists)
-      full_path = path.join(process.cwd(),'index.html');
+      full_path = 'index.html';//path.join(process.cwd(),'index.html');
     sys.puts(full_path);
     fs.readFile(full_path,"binary",function(err,file)
     {
