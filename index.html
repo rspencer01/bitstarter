@@ -103,6 +103,11 @@
       {
         color: white;
       }
+      .lnk
+      {
+        padding-top:40px;
+        margin-top:-40px;
+      }
     /* Marketing copy and footer */
       .copy
       {
@@ -151,7 +156,8 @@
             <ul class="nav">
               <li class="active"><a href="#">Home</a></li>
               <li><a href="#about">About</a></li>
-              <li><a href="#contact">Contact</a></li>
+              <li><a href="#progress">Progress</a></li>
+              <li><a href="#faq">FAQ</a></li>
             </ul>
           </div>
         </div>
@@ -208,6 +214,11 @@
           </div>
         </div>
       </div>
+      <div class="row-fluid">
+        <div class="span10 offset1">
+          <h3 class="lnk" id="about"> About </h3>
+        </div>
+      </div>
       <div class="row-fluid section1">
         <div class="span5 offset1 asset">
           <img class="img-polaroid" src="http://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/A_view_of_the_server_room_at_The_National_Archives.jpg/640px-A_view_of_the_server_room_at_The_National_Archives.jpg">
@@ -242,9 +253,7 @@
       </div> 
       <div class="row-fluid">
       	<div class="span10 offset1">
-          <div class="content">
-  	      	Project Progress:
-          </div>
+          <h3 class="lnk" id="progress">Project Progress:</h3>
 	      	<div class="thermometer progress active">
 	      		<div class="bar bar-success" style="width:10%">Backend</div>
 	      		<div class="bar bar-danger" style="width:15%">No webserver</div>
@@ -255,7 +264,7 @@
   	  </div>      
       <div class="row-fluid">
         <div class="span10 offset1">
-        <h3>FAQ</h3>
+        <h3 class="lnk" id="faq">FAQ</h3>
         <div class="accordion" id="accordion2">
           <div class="accordion-group faq">
             <div class="accordion-heading">
@@ -277,7 +286,7 @@
                  The answer to this is very dependant on the amount raised.  The maths is simple.  The more money raised, the better equipment we can purchase and the faster the result will be.
                </p>
                <p>
-                 A typical, top of the range CPU will give up to 10 Giga-FLops.  With a fairly small cluster of 10 CPUs, that will give 0.1 Tera-FLops.  More will be faster.
+                 A typical, top of the range CPU will give up to 10 Giga-FLops.  With a fairly small cluster of 10 CPUs, that will give 0.1 Tera-FLops.  More will be faster.  We aim to get about 1 TFLOP by the end of the first year.
                </p>
                <p>
                  An interesting possibility is presented by CPU PCI cards, such as Intel's <i>Xeon Phi</i> which sports a crazy 1 Tera-FLop on one card.  Depending on avaliability, cost and installation difficulty, this remains a distinct possibility.  Stay tuned!
@@ -291,10 +300,27 @@
             </div>
             <div id="collapseThree" class="accordion-body collapse">
               <div class="span10 offset1 accordion inner">
-                The whole concept of <b>.cmpt</b> is to make high performance computing accesable.  As such, node time will be accesibly cheap.  While prices are not finalised yet, you can expect to pay about 0.00001 Bitcoin per second (or 1 Bitcoin = 100 000s = 1.16 days) of computation time.
+                  The whole concept of <b>.cmpt</b> is to make high performance computing accesable.  As such, node time will be accesibly cheap.  While prices are not finalised yet, you can expect to pay about 0.00001 Bitcoin per second (or 1 Bitcoin = 100 000s = 1.16 days) of computation time.
               </div>
             </div>
           </div>
+          <div class="accordion-group faq">
+            <div class="accordion-heading">
+              <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion4" href="#collapseFour">Why use <b>.cmpt</b> over other supercomputer services?</a>
+            </div>
+            <div id="collapseFour" class="accordion-body collapse">
+              <div class="span10 offset1 accordion inner">
+                <p>
+                  Other supercomputer providers allow access to their computers for prices starting at $300 per hour.  At the July 2013 bitcoin value, <b>.cmpt</b> will charge $3 per hour.
+                </p>
+                <p>
+                  Granted, we will not have the same computing power as multi-national corperations, but as time progresses, the system will improve.  This makes <b>.cmpt</b> perfect for individuals, small businesses and academics who require high performance computing without large cost.
+                </p>
+              </div>
+            </div>
+          </div>
+
+
           <div class="accordion-group faq">
             <div class="accordion-heading">
               <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion4" href="#collapseFour">So what do I get for bitstarting?</a>
