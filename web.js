@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-var sys = require('sys');
+/*var sys = require('sys');
 var http = require('http');
 var path = require('path');
 var url = require('url');
@@ -30,11 +30,10 @@ http.createServer(function(request,response)
       }
     });
   });
-}).listen(8080);
+}).listen(8080);*/
 
-sys.puts("Listening on 8080");
 
-/*var express = require('express');
+var express = require('express');
 var fs = require('fs');
 
 var app = express.createServer(express.logger());
@@ -59,4 +58,4 @@ var port = process.env.PORT || 8080;
 app.listen(port, function() 
 {
   console.log("Listening on " + port);
-});*/
+});
