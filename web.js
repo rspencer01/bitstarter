@@ -1,37 +1,4 @@
 #!/usr/bin/env node
-/*var sys = require('sys');
-var http = require('http');
-var path = require('path');
-var url = require('url');
-var fs = require('fs');
-
-http.createServer(function(request,response)
-{
-  var pth = url.parse(request.url).pathname + '.html';
-  var full_path = pth;//path.join(process.cwd(),pth);
-  sys.puts(pth);
-  fs.exists(full_path,function(exists)
-  {
-    if (!exists)
-      full_path = 'index.html';//path.join(process.cwd(),'index.html');
-    sys.puts(full_path);
-    fs.readFile(full_path,"binary",function(err,file)
-    {
-      if (err)
-      {
-        response.write("Error 404");
-        respones.end();
-      }
-      else
-      {
-        response.writeHeader(200);
-        response.write(file,"binary");
-        response.end();
-      }
-    });
-  });
-}).listen(8080);*/
-
 
 var express = require('express');
 var fs = require('fs');
@@ -48,10 +15,14 @@ app.get('/', function(request, response)
   response.send(data);
   });
 });
-
-app.get('/faq', function(request,respons)
+app.get('/faq', function(request, response) 
 {
-  
+  fs.readFile('faq.html', 'utf8', function (err,data) {
+  if (err) {
+    return console.log(err);
+  }
+  response.send(data);
+  });
 });
 
 var port = process.env.PORT || 8080;
