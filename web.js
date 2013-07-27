@@ -33,7 +33,15 @@ app.get('/progress', function(request, response)
   response.send(data);
   });
 });
-
+app.get('/about', function(request, response) 
+{
+  fs.readFile('about.html', 'utf8', function (err,data) {
+  if (err) {
+    return console.log(err);
+  }
+  response.send(data);
+  });
+});
 var port = process.env.PORT || 8080;
 app.listen(port, function() 
 {
